@@ -4,7 +4,7 @@ import dotenv from 'dotenv/config'
 const uriDB = process.env.MONGO_DB
 const db = mongoose.connect(uriDB)
 
-mongoose.connection.on('connection', () => {
+mongoose.connection.on('connected', () => {
     console.log(`Connection open ${uriDB}`)
 })
 
